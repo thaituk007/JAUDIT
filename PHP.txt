@@ -1,0 +1,7 @@
+death_srm_notdischarge.php ข้อมูลผู้เสียชีวิตจาก SRM ที่ยังไม่ได้จำหน่ายใน JHCIS
+death_report_srm.php รายงานข้อมูลผู้เสียชีวิต
+death_report_srm_notdischarge.php รายงานข้อมูลผู้เสียชีวิต จากระบบ SRM ที่ยังไม่ได้จำหน่ายใน JHCIS
+api_right.php
+
+check_right_current.php template_check_right_current.xlsx ส่งตรวจสอบที่ SRM https://srm.nhso.go.th/#/secure/check-group/present
+eclaim_hsub_import_excel.php

@@ -1,0 +1,22 @@
+ถ้าต้องการตัวอย่างไฟล์ export_pdf.php และ export_excel.php ที่รองรับฟังก์ชันนี้ แจ้งได้เลยนะครับ!
+
+#PHPWithChatGPT #ChatGPT
+
+
+ปรับ Font Prompt ให้ทันสมัย พร้อมปรับ PHP ฉบับเต็ม ทั้ง report_typearea_by_village.php และ report_elderly_adl.php
+
+
+PID
+เลขบัตรประชาชน
+ชื่อ - นามสกุล
+วันเกิด
+อายุ
+บ้านเลขที่
+หมู่ที่
+หมู่บ้าน
+วันที่ SPECIALPP ล่าสุด
+รหัส SPECIALPP
+สถานะ ADL
+
+ปรับ Font Prompt ให้ทันสมัย พร้อมปรับ PHP ฉบับเต็ม report_elderly_adl.php
+เพิ่มปุ่ม Home ด้านบนซ้าย Link ไป หน้า index.php พร้อมปรับ PHP ฉบับเต็ม report_elderly_adl.php

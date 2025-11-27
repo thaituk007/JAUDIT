@@ -1,0 +1,50 @@
+ขนาดไฟล์สูงสุดใน php.ini
+upload_max_filesize = 20M
+post_max_size       = 25M
+
+
+<?php include 'footer.php'; ?>
+
+เพิ่ม index บนคอลัมน์ cid ในตาราง person_data
+ALTER TABLE person_data
+ADD INDEX idx_cid (cid);
+
+ALTER TABLE person_data ADD UNIQUE KEY unique_cid (cid);
+ALTER TABLE person_data ADD PRIMARY KEY(hospcode, cid);
+
+max_allowed_packet=20480M #20MB
+
+ALTER TABLE person_data
+MODIFY COLUMN movein DATE NULL,
+MODIFY COLUMN d_update DATE NULL;
+
+ALTER TABLE person_data ADD UNIQUE KEY unique_cid (cid);
+
+✅ ข้ามฟิลด์ HOSPCODE9
+✅ รองรับ header ทั้งตัวพิมพ์เล็กและพิมพ์ใหญ่ (Case-insensitive)
+✅ แปลงวันที่ว่างเป็น NULL
+✅ Batch size = 100,000
+✅ แสดงรายงานผลการนำเข้า + แจ้งเตือนถ้าเพิ่มใหม่เกิน 100,000
+✅ เพิ่มปุ่มลบข้อมูลที่ nation != '099' พร้อม confirm()
+✅ ปุ่ม "กลับหน้าแรก"
+✅ ใช้ฟอนต์ Prompt และปุ่มสไตล์ดูดี
+
+
+ALTER TABLE oppp_pivot MODIFY COLUMN report_month VARCHAR(10) NOT NULL;
+
+-- ตรวจสอบโครงสร้างคอลัมน์ report_month
+DESCRIBE oppp_pivot;
+
+-- แก้ไขคอลัมน์ report_month เป็น VARCHAR(7) NOT NULL
+ALTER TABLE oppp_pivot
+MODIFY COLUMN report_month VARCHAR(7) NOT NULL;
+ALTER TABLE oppp_pivot
+ADD UNIQUE KEY uniq_hosp_month (hospcode, report_month);
+ALTER TABLE oppp_pivot
+MODIFY upload_date DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP;
+
+ALTER TABLE oppp_pivot
+ADD COLUMN upload_date DATETIME DEFAULT CURRENT_TIMESTAMP;
+
+เพิ่มตัวนำเข้า Excel พร้อมปรับ Font Promt ให้ดูทันสมัย ดูสบายตา ในกรอบสีเหลี่ยม สีสันดูสวยงามน่าใช้ ดูทันสมัย
+ส่งออก Excel พร้อมปรับ Font Promt ให้ดูทันสมัย ดูสบายตา ในกรอบสีเหลี่ยม สีสันดูสวยงามน่าใช้ ดูทันสัมย

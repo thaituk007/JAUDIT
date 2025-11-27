@@ -1,0 +1,42 @@
+-- ลบตารางถ้ามีอยู่ก่อน
+DROP TABLE IF EXISTS `pcperson`;
+
+-- สร้างตาราง pcperson ใหม่
+CREATE TABLE `pcperson` (
+  `hospcode` VARCHAR(5) NOT NULL COMMENT 'รหัสหน่วยบริการ',
+  `cid` VARCHAR(128) NOT NULL COMMENT 'เลขประจำตัวประชาชน (เข้ารหัส base64)',
+  `pid` INT(11) DEFAULT NULL COMMENT 'ลำดับคนไข้',
+  `hid` INT(11) DEFAULT NULL COMMENT 'รหัสครัวเรือน',
+  `prename` VARCHAR(10) DEFAULT NULL COMMENT 'คำนำหน้า',
+  `name` VARCHAR(128) DEFAULT NULL COMMENT 'ชื่อ (เข้ารหัส base64)',
+  `lname` VARCHAR(128) DEFAULT NULL COMMENT 'นามสกุล (เข้ารหัส base64)',
+  `hn` VARCHAR(20) DEFAULT NULL COMMENT 'HN',
+  `sex` TINYINT(1) DEFAULT NULL COMMENT 'เพศ',
+  `birth` DATE DEFAULT NULL COMMENT 'วันเกิด',
+  `mstatus` TINYINT(1) DEFAULT NULL COMMENT 'สถานภาพสมรส',
+  `occupation_old` VARCHAR(10) DEFAULT NULL COMMENT 'อาชีพเก่า',
+  `occupation_new` VARCHAR(10) DEFAULT NULL COMMENT 'อาชีพใหม่',
+  `race` VARCHAR(10) DEFAULT NULL COMMENT 'เชื้อชาติ',
+  `nation` VARCHAR(10) DEFAULT NULL COMMENT 'สัญชาติ',
+  `religion` VARCHAR(10) DEFAULT NULL COMMENT 'ศาสนา',
+  `education` VARCHAR(10) DEFAULT NULL COMMENT 'การศึกษา',
+  `fstatus` VARCHAR(10) DEFAULT NULL COMMENT 'สถานะในครอบครัว',
+  `father` VARCHAR(128) DEFAULT NULL COMMENT 'พ่อ (เข้ารหัส base64)',
+  `mother` VARCHAR(128) DEFAULT NULL COMMENT 'แม่ (เข้ารหัส base64)',
+  `couple` VARCHAR(128) DEFAULT NULL COMMENT 'คู่สมรส (เข้ารหัส base64)',
+  `vstatus` VARCHAR(10) DEFAULT NULL COMMENT 'สถานะผู้ป่วย',
+  `movein` DATE DEFAULT NULL COMMENT 'วันย้ายเข้า',
+  `discharge` VARCHAR(10) DEFAULT NULL COMMENT 'วันจำหน่าย',
+  `ddischarge` VARCHAR(10) DEFAULT NULL COMMENT 'วันที่จำหน่าย',
+  `abogroup` VARCHAR(5) DEFAULT NULL COMMENT 'กรุ๊ปเลือด ABO',
+  `rhgroup` VARCHAR(5) DEFAULT NULL COMMENT 'กรุ๊ปเลือด RH',
+  `labor` VARCHAR(10) DEFAULT NULL COMMENT 'งาน',
+  `passport` VARCHAR(20) DEFAULT NULL COMMENT 'เลขหนังสือเดินทาง',
+  `typearea` TINYINT(1) DEFAULT NULL COMMENT 'ประเภทพื้นที่',
+  `d_update` DATETIME DEFAULT NULL COMMENT 'วันเวลาปรับปรุงข้อมูล',
+  `telephone` VARCHAR(20) DEFAULT NULL COMMENT 'โทรศัพท์บ้าน',
+  `mobile` VARCHAR(20) DEFAULT NULL COMMENT 'โทรศัพท์มือถือ',
+  PRIMARY KEY (`cid`),
+  KEY `idx_hospcode` (`hospcode`),
+  KEY `idx_pid` (`pid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci COMMENT='ตารางข้อมูล PCPERSON ที่เก็บข้อมูลเข้ารหัส';

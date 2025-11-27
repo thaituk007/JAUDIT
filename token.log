@@ -1,0 +1,14 @@
+[2025-09-29 09:00:06] เริ่มค้นหา token.txt ใน: C:\Users
+[2025-09-29 09:02:28] เริ่มค้นหา token.txt ใน: C:\Users
+[2025-09-29 09:03:26] เจอ token.txt ที่: C:\Users\ADISUK-01818-PC\SRM Smart Card Single Sign-On\token.txt
+[2025-09-29 09:03:26] ดึง Access Token สำเร็จจาก: C:\Users\ADISUK-01818-PC\SRM Smart Card Single Sign-On\token.txt
+[2025-09-29 09:03:26] API Request Failed (HTTP 401) URL: https://tsrm.nhso.go.th/api/ucws/v1/right-search?pid=1100100000001
+[2025-09-29 09:05:18] เจอ token.txt ที่: C:\Users\ADISUK-01818-PC\SRM Smart Card Single Sign-On\token.txt
+[2025-09-29 09:05:18] ดึง Access Token สำเร็จจาก: C:\Users\ADISUK-01818-PC\SRM Smart Card Single Sign-On\token.txt
+[2025-09-29 09:05:18] API Request Failed (HTTP 401) URL: https://tsrm.nhso.go.th/api/ucws/v1/right-search?pid=1100100000001
+[2025-09-29 09:06:14] ตรวจสอบ token.txt ใน: C:\Windows\system32\config\systemprofile\SRM Smart Card Single Sign-On
+[2025-09-29 09:06:14] ไม่พบ token.txt ใน C:\Windows\system32\config\systemprofile\SRM Smart Card Single Sign-On, เริ่ม recursive search C:\Users
+[2025-09-29 09:06:14] เริ่มค้นหา token.txt ใน: C:\Users
+[2025-09-29 09:09:03] เจอ token.txt ที่: C:\Users\ADISUK-01818-PC\SRM Smart Card Single Sign-On\token.txt
+[2025-09-29 09:09:03] ✅ ดึง Access Token สำเร็จ: C:\Users\ADISUK-01818-PC\SRM Smart Card Single Sign-On\token.txt
+[2025-09-29 09:09:03] API Request Failed: HTTP 401 URL: https://tsrm.nhso.go.th/api/ucws/v1/right-search?pid=5200199003628

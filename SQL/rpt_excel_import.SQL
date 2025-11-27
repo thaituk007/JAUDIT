@@ -1,0 +1,22 @@
+CREATE TABLE rpt_excel_import (
+    hospcode VARCHAR(5),
+    hospname VARCHAR(255),
+    province VARCHAR(100),
+    district VARCHAR(100),
+    subdistrict VARCHAR(100),
+    village VARCHAR(10),
+    house VARCHAR(20),
+    cid VARCHAR(13),
+    pname VARCHAR(20),
+    fname VARCHAR(100),
+    lname VARCHAR(100),
+    sex CHAR(1),
+    birthdate DATE,
+    age_year INT,
+    typearea VARCHAR(1),
+    movein_date DATE,
+    discharge_date DATE,
+    discharge_type VARCHAR(1),
+    last_update DATETIME DEFAULT CURRENT_TIMESTAMP,
+    PRIMARY KEY (cid, hospcode)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
